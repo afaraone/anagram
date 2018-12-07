@@ -2,4 +2,8 @@ const normalise = word => {
   return word.replace(/['!?-]/g, '').toLowerCase();
 };
 
-module.exports = {normalise};
+const sortAlpha = word => {
+  return word.split('').sort().join('');
+};
+
+module.exports = {normalise, sortAlpha};
