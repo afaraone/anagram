@@ -6,4 +6,8 @@ const sortAlpha = word => {
   return word.split('').sort().join('');
 };
 
-module.exports = {normalise, sortAlpha};
+const sortWord = word => {
+  return sortAlpha(normalise(word));
+};
+
+module.exports = {sortWord};
