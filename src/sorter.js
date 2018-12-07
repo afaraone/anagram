@@ -12,4 +12,4 @@ const sortWord = word => {
   return sortAlpha(normalise(word));
 };
 
-module.exports = {sortWord};
+module.exports = sortWord;

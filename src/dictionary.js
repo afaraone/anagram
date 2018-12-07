@@ -1,5 +1,5 @@
 // creates an anagram dictionary
-const {sortWord} = require('./sorter');
+const sortWord = require('./sorter');
 const request = require('request');
 const fs = require('fs');
 

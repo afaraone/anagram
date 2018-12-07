@@ -1,6 +1,6 @@
 // Reads dictionary and returns anagrams for word
 const fs = require('fs');
-const {sortWord} = require('./sorter');
+const sortWord = require('./sorter');
 
 const findAnagramArray = (key, dictionary) => {
   if (dictionary[key] !== undefined) {

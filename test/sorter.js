@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const {sortWord} = require('../src/sorter');
+const sortWord = require('../src/sorter');
 
 describe('sortWord', () => {
   it('it sorts word alphabetically', () => {
