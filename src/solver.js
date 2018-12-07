@@ -1,4 +1,6 @@
 // Reads dictionary and returns anagrams for word
+const fs = require('fs');
+const {sortWord} = require('./sorter');
 
 const findAnagramArray = (key, dictionary) => {
   if (dictionary[key] !== undefined) {
@@ -7,4 +9,12 @@ const findAnagramArray = (key, dictionary) => {
   return 'Entry not found'
 };
 
-module.exports = {findAnagramArray}
+const solve = word => {
+  let sortedWord = sortWord(word);
+  let string = fs.readFileSync('anagrams.txt', 'binary');
+  let dictionary = JSON.parse(string);
+  return findAnagramArray(sortedWord, dictionary);
+};
+
+
+module.exports = {findAnagramArray, solve}
