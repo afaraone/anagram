@@ -23,4 +23,4 @@ const removeDuplicate = (word, array) => {
 };
 
 
-module.exports = {findAnagramArray, solve}
+module.exports = solve
