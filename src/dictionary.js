@@ -25,4 +25,14 @@ const createDictionary = text => {
   return createHash(wordList);
 };
 
-module.exports = {parseText, createHash, createDictionary}
+const writeDictionary = (url, filename) => {
+  request.get(url, {encoding: 'binary'}, (err, res, body) => {
+    let dictionary = JSON.stringify(createDictionary(body));
+    fs.writeFile(filename, dictionary, 'binary', (err, data) => {
+      if (err) throw err;
+      console.log('Dictionary has been written!');
+    });
+  });
+};
+
+module.exports = {createDictionary, writeDictionary}
