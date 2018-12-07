@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
+    "start": "node server",
     "postinstall": "node initDictionary"
   },
   "repository": {
