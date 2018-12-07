@@ -1,11 +1,13 @@
 // creates an anagram dictionary
 const {sortWord} = require('./sorter');
+const request = require('request');
+const fs = require('fs');
 
 const parseText = text => {
   return text.split('\n')
 };
 
-const createDictionary = wordList => {
+const createHash = wordList => {
   let dictionary = {};
   for (let i = 0; i < wordList.length; i++) {
     let word = wordList[i];
@@ -18,4 +20,9 @@ const createDictionary = wordList => {
   return dictionary;
 };
 
-module.exports = {parseText, createDictionary}
+const createDictionary = text => {
+  wordList = parseText(text);
+  return createHash(wordList);
+};
+
+module.exports = {parseText, createHash, createDictionary}

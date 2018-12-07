@@ -1,6 +1,7 @@
 const expect = require('chai').expect;
 const {parseText} = require('../src/dictionary');
 const {createDictionary} = require('../src/dictionary');
+const {createHash} = require('../src/dictionary');
 
 const text = "dog\ngod\nopt\ntop";
 const wordArray = ["dog", "god", "opt", "top"];
@@ -11,8 +12,14 @@ describe('parseText', () => {
   });
 });
 
-describe('createDictionary', () => {
+describe('createHash', () => {
   it('returns hash, key is sorted word val is array of words', () => {
-    expect(createDictionary(wordArray)).to.deep.equal(dictionary);
+    expect(createHash(wordArray)).to.deep.equal(dictionary);
+  });
+});
+
+describe('createDictionary', () => {
+  it('turns text into dictionary', () => {
+    expect(createDictionary(text)).to.deep.equal(dictionary);
   });
 });
