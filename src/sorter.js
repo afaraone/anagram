@@ -1,3 +1,5 @@
+// Creates a sorted word
+
 const normalise = word => {
   return word.replace(/['!?-]/g, '').toLowerCase();
 };
