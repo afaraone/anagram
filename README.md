@@ -1,11 +1,19 @@
 # Anagram Solver Tech Test
 A simple web API that returns all possible anagrams for a given word. It uses word entries from this [link](http://codekata.com/data/wordlist.txt). Made as a tech test for Apolitical.
 
+## Time Taken
+In total, this task took me around 2 hours. If you'd like to see how far I got at the 1 hour mark please click [here](https://github.com/afaraone/anagram/commit/644d57f5ef4813b54a8c4e840b84090c41978523).
+
+## Tech Stack
+ - NodeJS + Request Package
+ - Mocha, Chai, Sinon for testing
+ 
 ## Setup
  - Clone the repository.
- - Run `npm install` to install dependencies. This will install testing frameworks (Mocha, Chai, Sinon) and create `anagrams.txt` file.
+ - Run `npm install` to install dependencies. This will install testing frameworks (Mocha, Chai, Sinon) and create `anagrams.txt`.
 
 ## Use
+This app uses the `anagrams.txt` as a dictionary to check for any anagrams. It can be used in the CLI and on a server.
  ### In CLI
  - Run `node`
  - Run `const solver = require('./src/solver')`
@@ -51,17 +59,11 @@ fetch('http://localhost:3000/table')
 ["ablet","blate","bleat"]
 ```
 
-## Tech Stack
- - NodeJS + Request Package
- - Mocha, Chai, Sinon for testing
-
 ## Testing
 I tried to fully TDD everything, however I had an issue with mocking the `fs` calls for `writeDictionary` method in `src/dictionary.js`
 ```
 > anagram@1.0.0 test /home/andres/Projects/tech-test/anagram
 > mocha
-
-
 
   createDictionary
     ✓ turns text into dictionary
@@ -78,6 +80,8 @@ I tried to fully TDD everything, however I had an issue with mocking the `fs` ca
 
   6 passing (11ms)
 ```
+
+N.B The tests for all private methods have been deleted, click (here)[https://github.com/afaraone/anagram/commit/b627e5e3355d7c0a890d2c0f1d895084cacc8465], (here)[https://github.com/afaraone/anagram/commit/644d57f5ef4813b54a8c4e840b84090c41978523], and (here)[https://github.com/afaraone/anagram/commit/57e9fbd1b212e04807a83c55eb02b4636c89d732] to see them.
 
 ## Approach
 ### Working out an Anagram
@@ -110,6 +114,7 @@ const findAnagramArray = (key, dictionary) => {
   return 'Entry not found'
 };
 ```
+Please check `src/solver.js` to see the functions for making an anagram call.
 
 ## Reflection
 Overall I am quite happy with my attempt. I think I made the correct decision to create a dictionary file. As mentioned before, I'm a bit dissapointed I couldn't succesfully mock the calls to `fs` for testing `writeDictionary`.
