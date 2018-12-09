@@ -81,7 +81,7 @@ I tried to fully TDD everything, however I had an issue with mocking the `fs` ca
   6 passing (11ms)
 ```
 
-N.B The tests for all private methods have been deleted, click (here)[https://github.com/afaraone/anagram/commit/b627e5e3355d7c0a890d2c0f1d895084cacc8465], (here)[https://github.com/afaraone/anagram/commit/644d57f5ef4813b54a8c4e840b84090c41978523], and (here)[https://github.com/afaraone/anagram/commit/57e9fbd1b212e04807a83c55eb02b4636c89d732] to see them.
+N.B The tests for all private methods have been deleted, click [here](https://github.com/afaraone/anagram/commit/b627e5e3355d7c0a890d2c0f1d895084cacc8465), [here](https://github.com/afaraone/anagram/commit/644d57f5ef4813b54a8c4e840b84090c41978523), and [here](https://github.com/afaraone/anagram/commit/57e9fbd1b212e04807a83c55eb02b4636c89d732) to see them.
 
 ## Approach
 ### Working out an Anagram
